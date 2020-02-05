@@ -400,6 +400,10 @@ i[3-7]86-*-vxworks*)	targ_emul=elf_i386_vxworks
 			;;
 i[3-7]86-*-chaos)	targ_emul=elf_i386_chaos
 			;;
+i[3-7]86-*-simplix*)	targ_emul=elf_i386_simplix
+			targ_extra_emuls=elf_i386
+			targ64_extra_emuls="elf_x86_64_simplix elf_x86_64"
+			;;
 ia16-*-elf*)		targ_emul=elf_i386
 			targ_extra_emuls=i386msdos
 			;;
@@ -986,6 +990,9 @@ x86_64-*-cygwin)	targ_emul=i386pep ;
 x86_64-*-mingw*)	targ_emul=i386pep ;
 			targ_extra_emuls=i386pe
 			targ_extra_ofiles="deffilep.o pep-dll.o pe-dll.o"
+			;;
+x86_64-*-simplix*)	targ_emul=elf_x86_64_simplix
+			targ_extra_emuls="elf_i386_simplix elf_x86_64 elf_i386"
 			;;
 xc16x-*-elf)		targ_emul=elf32xc16x
 			targ_extra_emuls="elf32xc16xl elf32xc16xs"
